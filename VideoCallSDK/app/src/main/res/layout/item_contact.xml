@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:id="@+id/llChiTiet"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp">
+
+        <ImageView
+            android:id="@+id/caller_avatar"
+            android:layout_width="@dimen/_44sdp"
+            android:layout_height="@dimen/_44sdp"
+            android:src="@drawable/ic_vnpt"
+            android:padding="@dimen/_6sdp"
+            android:layout_gravity="center"
+            app:tint="@color/color_blue" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tvName"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="@dimen/_14sdp"
+                android:text="Nguyễn Thanh XXX"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:textColor="@color/tv_gray_phone"
+                android:textSize="@dimen/_14sdp"
+                android:text="0xxxxxxxxx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivCall"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:src="@drawable/ic_call"
+            android:layout_gravity="center"
+            app:tint="@color/color_blue" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_blue"/>
+</LinearLayout>

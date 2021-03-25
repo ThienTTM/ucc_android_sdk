@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.1"
+
+    signingConfigs {
+        config {
+            storeFile file('.\\..\\signed_key.jks')
+            storePassword 'Vnpt@123'
+            keyAlias = 'VideoCallSDK'
+            keyPassword 'Vnpt@123'
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.vnptit.innovation.videocall"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 5
+        versionName "2.0.7"
+        ndk {
+            abiFilters 'armeabi-v7a', 'x86', 'x86_64', 'arm64-v8a'
+        }
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "VideoCall Sample-${variant.buildType.name}-v${defaultConfig.versionName}.apk"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    externalNativeBuild {
+        cmake {
+            path file('CMakeLists.txt')
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha03'
+
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+
+    annotationProcessor 'androidx.annotation:annotation:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+
+    //JWT parse https://github.com/auth0/JWTDecode.Android
+    implementation 'com.auth0.android:jwtdecode:1.4.0'
+    implementation ('com.github.bumptech.glide:glide:4.8.0')  {
+        exclude group: "com.android.support"
+    }
+
+    // RxJava
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.5'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    //implementation 'com.squareup.retrofit2:adapter-rxjava2:2.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.4'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.4'
+
+    implementation 'com.google.firebase:firebase-messaging:20.3.0'
+    implementation 'androidx.room:room-runtime:2.2.5'
+    annotationProcessor 'androidx.room:room-compiler:2.2.5'
+
+    implementation 'com.github.hotchemi:permissionsdispatcher:3.1.0'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:3.1.0'
+    implementation 'com.dropbox.core:dropbox-core-sdk:3.0.8'
+
+    //Implement VideoCall SDK
+    implementation project(':video_call_sdk-release')
+    //implementation ('org.jitsi.react:jitsi-meet-sdk:2.2.2') { transitive = true }
+
+    // thư viện đi kèm react-native 0.59.9 aar
+    implementation("com.facebook.infer.annotation:infer-annotation:+")
+    implementation("com.facebook.fresco:fresco:1.10.0")
+    implementation("com.facebook.fresco:imagepipeline-okhttp3:1.10.0")
+    implementation("javax.inject:javax.inject:1")
+    implementation("com.squareup.okhttp3:okhttp-urlconnection:3.12.4")
+
+
+    implementation "androidx.work:work-runtime-ktx:2.5.0"
+
+    //Stomp socket
+    implementation 'com.github.NaikSoftware:StompProtocolAndroid:1.6.6'
+}

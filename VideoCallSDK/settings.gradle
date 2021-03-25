@@ -1,0 +1,4 @@
+include ':kotlin'
+include ':video_call_sdk-release'
+include ':app'
+rootProject.name = "VideoCallSDK"

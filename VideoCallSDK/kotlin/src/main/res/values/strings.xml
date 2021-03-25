@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Video Call Sample Kotlin</string>
+
+    <string name="activity_home_title">Video Call Sample Kotlin</string>
+    <string name="activity_home_no_contact">Bạn chưa có liên hệ nào</string>
+    <string name="activity_home_add_contact">Thêm liên hệ</string>
+    <string name="activity_home_register">Đăng ký thiết bị</string>
+
+    <string name="lien_he">Liên hệ</string>
+    <string name="ten">Tên: </string>
+    <string name="id">ID: </string>
+    <string name="luu">Lưu</string>
+    <string name="thoat">Thoát</string>
+    <string name="xoa">Xóa liên hệ</string>
+    <string name="accept_call">Call Đã được chấp nhận</string>
+    <string name="reject_call">Call Đã bị từ chối</string>
+    <string name="end_call">Cuộc gọi đã kết thúc</string>
+</resources>

@@ -1,0 +1,42 @@
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+#Ignore folder
+/.gradle
+/.idea
+/video_call_sdk/.idea
+/build
+
+#Ignore all file
+*.iml
+
+#Ignore sub folder
+/local.properties
+/app/build
+/app/release
+/app/app.iml
+/gradle
+/app/.cxx
+/app/debug
+/app/.idea
+/gradle-wrapper.properties
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+
+# Gradle files
+.gradle/
+build/
+gradle/
+gradlew
+gradlew.bat
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+#Ignore kotlin folder
+/kotlin/build
+/kotlin/release
+/kotlin/.cxx
+/kotlin/debug

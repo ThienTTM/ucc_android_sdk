@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('video_call_sdk-release-v2.0.7.aar'))

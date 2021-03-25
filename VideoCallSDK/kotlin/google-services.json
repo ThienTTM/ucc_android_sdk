@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "126215277690",
+    "project_id": "demosso-b0c4b",
+    "storage_bucket": "demosso-b0c4b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126215277690:android:abb7da121e799e30d2ffc3",
+        "android_client_info": {
+          "package_name": "com.vnptit.innovation.videocall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "126215277690-phb58uqi5isumahhn5ok9h6ma9r8jq87.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vnptit.innovation.videocall",
+            "certificate_hash": "45d7bd9a90bbb3588fa11f5d73ed99e21dd8d352"
+          }
+        },
+        {
+          "client_id": "126215277690-06od62e3fbmn8vtbhtahkfo5jocq5i36.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHrpnYjqQ13qTwEhSWDF2xT23k3GkGCb8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "126215277690-06od62e3fbmn8vtbhtahkfo5jocq5i36.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "251240502288",
+    "firebase_url": "https://ekycvideocall.firebaseio.com",
+    "project_id": "ekycvideocall",
+    "storage_bucket": "ekycvideocall.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251240502288:android:a131ed7f07ed2ba5732695",
+        "android_client_info": {
+          "package_name": "com.vnptit.innovation.videocall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "251240502288-n0g9kdn28ctv73a0co2kjkem9tes7amf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6BHsdR42Cu2N8Svouo3D4Aq-hvca8quM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "251240502288-n0g9kdn28ctv73a0co2kjkem9tes7amf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
